@@ -37,6 +37,7 @@ public class RegistrationUserService {
                 userRequest.getEmail(),
                 buildEmail(userRequest.getUsername(), link));
 
+
         return token;
     }
 

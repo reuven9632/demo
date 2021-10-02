@@ -1,11 +1,11 @@
-package com.example.demo.registration;
+package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream;
 
 import com.example.demo.User.User;
 
 import java.util.function.Function;
 
-import static com.example.demo.registration.RegistrationValidator.*;
-import static com.example.demo.registration.RegistrationValidator.RegistrationUserValidatorResult.*;
+import static com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.RegistrationValidator.*;
+import static com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.RegistrationValidator.RegistrationUserValidatorResult.*;
 
 public interface RegistrationValidator extends Function<User, RegistrationUserValidatorResult> {
 
