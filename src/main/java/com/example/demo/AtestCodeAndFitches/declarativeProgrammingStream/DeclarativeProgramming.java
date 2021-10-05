@@ -4,9 +4,13 @@ import com.example.demo.User.User;
 import com.example.demo.User.UserRole;
 import lombok.*;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.web.SortHandlerMethodArgumentResolver;
+import org.springframework.security.core.parameters.P;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.RegistrationValidator.*;
@@ -36,16 +40,16 @@ public class DeclarativeProgramming {
                 .forEach(System.out::println);
     }
 
+    /**
+     * STREAM
+     *
+     * */
     public void streamFunction2(){
         List<Person> personList = people.stream()
                 .filter(person -> person.getPass().equals("123"))
                 .collect(Collectors.toList());
 
         personList.forEach(System.out::println);
-    }
-    
-    public void consumierFuncton(){
-        // TODO: 02.10.2021  
     }
 
     public void someFunctionJustTest(){
@@ -58,6 +62,33 @@ public class DeclarativeProgramming {
             throw new IllegalStateException (result.name());
         //
     }
+
+    /**CONSUMER
+     * (person) -> {}*/
+    static Consumer<Person> printSomePerson = person -> {
+        System.out.println(
+                "Name of person is: " + person.getName() + "\n" +
+                "Pass is: " + person.getPass()
+        );
+    };
+
+    /**SUPPLIER
+     * () -> {return new person()}
+     * */
+    static Supplier<List<Person>> personsSupplier = () -> {
+        return List.of(
+                new Person("niv", "123"),
+                new Person("nadav", "123"));
+    };
+
+    /**PREDICATE
+     * () -> {return new person()}
+     * */
+    static Predicate<Person> predicateValidatorPerson = person -> {
+        return person.getName().length() > 2;
+    };
+
+
 
 
 
