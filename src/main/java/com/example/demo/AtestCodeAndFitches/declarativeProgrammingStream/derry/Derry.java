@@ -7,7 +7,13 @@ import java.time.LocalDate;
 import java.time.Period;
 
 @Entity
-@Table
+@Table(
+        name = "derry",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "derry_email_unique", columnNames = "email")
+                /** if i make unique constraint on @Table i can not do unique on @Column*/
+        }
+)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,7 +31,7 @@ public class Derry {
     )
     private Long id;
     private String name;
-    private String Emale;
+    private String email;
     private LocalDate dob;
     /** Do not make column on table because it is compilated/calculate , need make new getMethod with calculation*/
     @Transient
