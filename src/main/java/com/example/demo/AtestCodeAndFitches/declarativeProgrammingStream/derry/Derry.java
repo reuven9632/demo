@@ -30,14 +30,21 @@ public class Derry {
             generator = "derry_sequence"
     )
     private Long id;
+    @Column(
+            name = "name",
+            nullable = false
+    )
     private String name;
+    @Column(
+            name = "email",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String email;
     private LocalDate dob;
     /** Do not make column on table because it is compilated/calculate , need make new getMethod with calculation*/
     @Transient
     private Integer age;
 
-    public Integer getAge() {
-        return Period.between(dob, LocalDate.now()).getYears();
-    }
+    public Integer getAge() { return Period.between(dob, LocalDate.now()).getYears(); }
 }
