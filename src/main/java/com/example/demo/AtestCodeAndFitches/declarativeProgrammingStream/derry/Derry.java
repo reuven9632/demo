@@ -46,5 +46,11 @@ public class Derry {
     @Transient
     private Integer age;
 
+    public Derry(String name, String email, LocalDate dob) {
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+    }
+
     public Integer getAge() { return Period.between(dob, LocalDate.now()).getYears(); }
 }
