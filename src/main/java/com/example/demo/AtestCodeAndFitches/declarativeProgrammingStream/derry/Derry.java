@@ -18,17 +18,19 @@ import java.time.Period;
 @Setter
 @NoArgsConstructor
 @ToString
+@EqualsAndHashCode
 public class Derry {
 
     @SequenceGenerator(
             name = "derry_sequence",
-           sequenceName = "darry_sequence",
+           sequenceName = "derry_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
             generator = "derry_sequence"
     )
+    @Id
     private Long id;
     @Column(
             name = "name",

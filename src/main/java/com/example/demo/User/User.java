@@ -17,7 +17,12 @@ import java.util.Collections;
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name = "users")
+@Table(
+        name = "users",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "user_email_unique", columnNames = "email")
+        }
+)
 public class User implements UserDetails {
 
     @SequenceGenerator(
@@ -32,13 +37,23 @@ public class User implements UserDetails {
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
+
+    @Column(nullable = false)
     private String username;
+
+    @Column(nullable = false)
     private String lastName;
+
+    @Column(nullable = false)
     private String email;
+
     private String password;
+
     @Enumerated(EnumType.STRING)
     private UserRole role;
+
     private boolean locked = false;
+
     private boolean enabled = false;
 
     public User(String username, String lastName, String email, String password, UserRole role) {
