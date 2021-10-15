@@ -32,8 +32,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilter(new UserNameAndPasswordAuthenticationFilter(authenticationManager()))
                 .authorizeRequests()
                     .antMatchers("/", "/api/v*/registration/**").permitAll()
+                /////////////////////////////////////////////////////////////////////////
+                //example from another project
+//                  .antMatchers("/api/**").hasRole(ADMIN.name())
+//                  .antMatchers("/api//**").hasRole(ADMIN.name())
+//                  .antMatchers("/api/v1/student/write/").hasRole(ADMIN.name())
+//                  .antMatchers("/api/v1/course/**").hasRole(ADMIN.name())
+//                  .antMatchers("/api/v1/course/write/").hasRole(ADMIN.name())
+//                  .antMatchers(HttpMethod.POST,"/manager/api/**").hasAuthority(COURSE_WRITE.getPermission())
+//                  .antMatchers(HttpMethod.DELETE, "/manager/api/**").hasAuthority(COURSE_WRITE.getPermission())
+//                  .antMatchers(HttpMethod.PUT, "/manager/api/**").hasAuthority(COURSE_WRITE.getPermission())
+//                  .antMatchers(HttpMethod.GET,"/manager/api/**").hasAnyRole(ADMIN.name(), STUDENT.name())
                 .anyRequest()
                 .authenticated();
+                /*.and()
+                    .formLogin()
+                    .loginPage("/login")
+                    .permitAll()
+                    .defaultSuccessUrl("/courses")
+                .and()
+                    .logout()
+                    .logoutUrl("/logout")
+                    .logoutSuccessUrl("/login")
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))// TODO: 09.06.2021 jast for .csrf().disable()
+                    .clearAuthentication(true)
+                    .invalidateHttpSession(true)
+                    .deleteCookies("JSESSIONID")
+                .and()
+                    .rememberMe()
+                    .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21))
+                    .key("someKey")
+                .and()
+                    .httpBasic();*/
     }
 
     @Override
