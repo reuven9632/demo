@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.customer.wallet;
 
-import com.example.demo.customer.Customer;
+import com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.customer.Customer;
 import lombok.*;
 import org.springframework.stereotype.Component;
 

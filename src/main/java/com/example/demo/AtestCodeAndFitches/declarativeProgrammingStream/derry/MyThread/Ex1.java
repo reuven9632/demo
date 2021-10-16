@@ -1,4 +1,4 @@
-package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.MyThread;
+package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
 public class Ex1 {
     public static void main(String[] args) {

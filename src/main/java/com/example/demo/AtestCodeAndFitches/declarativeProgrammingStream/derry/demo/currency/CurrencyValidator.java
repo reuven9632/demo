@@ -3,7 +3,6 @@ package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.
 import java.util.function.Function;
 
 import static com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.currency.CurrencyValidator.CurrencyResult.*;
-import static com.example.demo.currency.CurrencyValidator.CurrencyResult.*;
 
 public interface CurrencyValidator extends Function<Currency, CurrencyValidator.CurrencyResult> {
 

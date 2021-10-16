@@ -1,4 +1,4 @@
-package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.MyThread;
+package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

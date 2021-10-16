@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.customer;
 
-import com.example.demo.customer.wallet.CurrencyOfWallet;
+import com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.customer.wallet.CurrencyOfWallet;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

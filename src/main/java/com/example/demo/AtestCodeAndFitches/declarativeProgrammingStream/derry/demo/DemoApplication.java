@@ -1,8 +1,7 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo;
 
-import com.example.demo.MyThread.MyThread;
-import com.example.demo.MyThread.MyThread3;
-import com.example.demo.MyThread.MyThread4;
+import com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread.MyThread4;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,4 +1,4 @@
-package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.demo.MyThread;
+package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
 import javax.swing.*;
 import java.util.ArrayList;
