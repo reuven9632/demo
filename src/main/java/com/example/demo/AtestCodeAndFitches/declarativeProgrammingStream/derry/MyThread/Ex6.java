@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex16 {
+public class Ex6 {
     public static void main(String[] args) {
         Thread thread = new Thread(new TelephoneCall());
         Thread thread1 = new Thread(new ViberCall());

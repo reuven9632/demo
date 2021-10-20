@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex17 {
+public class Ex8 {
     public static void main(String[] args) {
         Thread thread1 = new Thread(new Eat());
         Thread thread2 = new Thread(new Speak());

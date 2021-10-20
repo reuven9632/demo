@@ -1,8 +1,9 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex11 {
+public class Ex2 {
     public static void main(String[] args) {
         Th1 th = new Th1();
+
         Thread th1 = new Thread(th);
         Thread th2 = new Thread(th);
         Thread th3 = new Thread(th);
@@ -11,6 +12,7 @@ public class Ex11 {
         th2.start();
         th3.start();
         th4.start();
+
     }
 }
 
@@ -22,7 +24,7 @@ class Th1 implements Runnable{
 
     public synchronized void  countPlus(){
         MyCount.count++;
-        System.out.println(MyCount.count);
+        System.out.println(MyCount.count + Thread.currentThread().getName());
     }
 
     @Override

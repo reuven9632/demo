@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex12 {
+public class Ex3 {
     static int count = 0;
     public synchronized static void increment(){
         count++;
@@ -25,7 +25,7 @@ class Th2 implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 10000; i++) {
-            Ex12.increment();
+            Ex3.increment();
             System.out.println("iteration #" + i);
         }
     }

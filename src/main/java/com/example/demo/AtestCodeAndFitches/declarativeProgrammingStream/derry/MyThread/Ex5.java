@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex14 {
+public class Ex5 {
     public static void main(String[] args) {
        /* Th3 th3 = new Th3();
         Thread thread = new Thread(th3);
@@ -36,23 +36,23 @@ class Th3 implements Runnable{
     public static volatile Object lock = new Object();
 
     public void work1(){
-        work2();
-        synchronized (lock){
-            Count1.count++;
-            System.out.println("[" + Count1.count + "]");
-            System.out.println(Thread.currentThread().getName());
-        }
+        System.out.println("SOME TEXT!!!!!!!!!");
     }
 
     public void work2(){
-        System.out.println("yahoooooooooooooo");
+        work1();
+        synchronized (lock){
+            Count1.count++;
+            System.out.print("[" + Count1.count + "]  ");
+            System.out.println(Thread.currentThread().getName());
+        }
     }
 
 
     @Override
     public void run() {
-        for (int i = 0; i < 500; i++) {
-            work1();
+        for (int i = 0; i < 15; i++) {
+            work2();
         }
     }
 }
