@@ -43,6 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                  .antMatchers(HttpMethod.DELETE, "/manager/api/**").hasAuthority(COURSE_WRITE.getPermission())
 //                  .antMatchers(HttpMethod.PUT, "/manager/api/**").hasAuthority(COURSE_WRITE.getPermission())
 //                  .antMatchers(HttpMethod.GET,"/manager/api/**").hasAnyRole(ADMIN.name(), STUDENT.name())
+                /////////////////////////////////////////////////////////////////////////
                 .anyRequest()
                 .authenticated();
                 /*.and()

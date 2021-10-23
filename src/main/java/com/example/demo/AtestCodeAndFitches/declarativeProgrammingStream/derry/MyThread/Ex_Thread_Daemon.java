@@ -1,6 +1,6 @@
 package com.example.demo.AtestCodeAndFitches.declarativeProgrammingStream.derry.MyThread;
 
-public class Ex_Thread_Deamon {
+public class Ex_Thread_Daemon {
     public static void main(String[] args) throws InterruptedException {
         Thread thread_Ex9 = new Thread(new Thread_1());
         thread_Ex9.start();
@@ -26,7 +26,7 @@ public class Ex_Thread_Deamon {
 class Thread_1 implements Runnable{
     @Override
     public void run() {
-        System.out.println("Thread srarts!!");
+        System.out.println("Thread starts!!");
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
