@@ -17,15 +17,34 @@ public class Ex_ScheduledThreadPool{
         scheduledExecutorService.awaitTermination(5, TimeUnit.SECONDS); //like thread.join
         System.out.println("------------  main ends  --------------");*/
 
-        //or use .scheduleAtFixedRate (name Thread, delay, period of task working, TimeUnit)
+
+
+        /**
+        //or use .scheduleAtFixedRate (name Thread, delay, period of task working between start and start of tasks, TimeUnit)
         System.out.println("------------------------------------------------------------------------------------\n");
-        scheduledExecutorService.scheduleAtFixedRate(new ScheduledThreadPool(), 4, 2, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(new ScheduledThreadPool(), 3, 1, TimeUnit.SECONDS);
+
+        Thread.sleep(20000);
+        scheduledExecutorService.shutdown();
+
+        Thread.sleep(800);
+        System.out.println("------------  main ends  --------------");*/
+
+
+        //or use .scheduleAtFixedRate (name Thread, delay, period of task working between end and start of tasks, TimeUnit)
+        System.out.println("------------------------------------------------------------------------------------\n");
+        scheduledExecutorService.scheduleAtFixedRate(new ScheduledThreadPool(), 3, 1, TimeUnit.SECONDS);
 
         Thread.sleep(20000);
         scheduledExecutorService.shutdown();
 
         Thread.sleep(800);
         System.out.println("------------  main ends  --------------");
+
+
+
+
+
 
 
     }
@@ -38,7 +57,7 @@ class ScheduledThreadPool implements Runnable{
         System.out.println(Thread.currentThread().getName() + "  --   ScheduledThreadPool START");
 
         try {
-            Thread.sleep(4000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
